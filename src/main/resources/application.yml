@@ -1,0 +1,20 @@
+server:
+  port: 7777
+spring:
+  activemq:
+    broker-url: tcp://121.199.57.58:61608
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+      max-connections: 50
+#配置activemq信任user类
+    packages:
+      trust-all: true
+  jms:
+    pub-sub-domain: false  #false为queue true为topic 默认为false
+    template:
+      default-destination: activemq.default.destination
+
+QUEUE_NAME: test_queue
+TOPIC_NAME: test_topic
